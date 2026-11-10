@@ -1,39 +1,50 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 const features=[
- ['✦','Guilds','Give your people a corner of the server that feels like theirs.','docs/guilds.html'],
- ['◈','Economy & progression','A shared economy, personal rewards and reasons to keep going.','docs/economy.html'],
- ['⌁','Fishing','Cast a line, find something rare and fill out your Fishdex.','docs/fishing.html'],
- ['♫','Music','Put something on and let the voice channel do its thing.','docs/music.html'],
- ['❖','Text games','A little competition, collecting and chaos between conversations.','docs/owo.html'],
- ['⌘','Commands','The full list, without having to guess what to type.','docs/commands.html']
+ ['✳','Guilds','A place for your people. Build something together, then make it yours.','docs/guilds.html','01'],
+ ['↗','Economy','One shared world of currency, rewards and things worth working towards.','docs/economy.html','02'],
+ ['≈','Fishing','Quietly become the person who knows far too much about fish.','docs/fishing.html','03'],
+ ['♫','Music','Give the voice channel a soundtrack.','docs/music.html','04'],
+ ['✣','Text games','Small competitions, collections and friendly distractions.','docs/owo.html','05'],
+ ['⌘','Commands','The practical stuff, without the treasure hunt.','docs/commands.html','06']
 ];
 ---
-<SiteLayout title="NightGuildBot — Give the chat something to do" description="Guilds, fishing, progression, music and little reasons to hang around.">
+<SiteLayout title="NightGuildBot — Stay a little longer" description="A community Discord bot for guilds, progression, fishing, music and the moments between.">
 <section class="container hero">
  <div class="hero-copy">
-  <span class="eyebrow">A DISCORD BOT BUILT FOR THE IN-BETWEEN</span>
-  <h1>Give the chat<br/><span class="gradient">something to do.</span></h1>
-  <p class="lead">Start a guild. Go fishing. Get ridiculously invested in a collection. NightGuildBot brings the little side quests, shared goals and useful tools that make a server feel lived in.</p>
-  <div class="actions"><a class="button primary" href="docs/getting-started.html">Take a look <span aria-hidden="true">↗</span></a><a class="button" href="docs/index.html">Read the docs</a></div>
-  <div class="hero-meta"><span><i class="status-dot"></i> Independently built</span><span>Guilds</span><span>Fishing</span><span>Games</span></div>
+  <div class="hero-kicker"><span class="live-pip"></span> ANOTHER NIGHT IN THE SERVER</div>
+  <p class="hero-index">INDEPENDENTLY BUILT / FOR THE PEOPLE IN YOUR CHAT</p>
+  <h1>Not just a bot.<br/><em>A reason to <span class="gradient">hang around.</span></em></h1>
+  <p class="lead">The conversation slows down. Someone starts a guild. Someone else goes fishing for one last catch. NightGuild gives your community little worlds to get lost in, without getting in the way of the one you already have.</p>
+  <div class="actions"><a class="button primary" href="docs/getting-started.html">Find your way in <span aria-hidden="true">↗</span></a><a class="text-link" href="docs/index.html">Explore the field guide <span aria-hidden="true">→</span></a></div>
+  <div class="hero-footnote"><span>BUILT INDEPENDENTLY</span><span class="footnote-line"></span><span>ALWAYS A WORK IN PROGRESS</span></div>
  </div>
- <div class="hero-visual" aria-label="NightGuildBot feature overview">
-  <span class="hero-float one"><span class="float-mark">✳</span> Your server, with side quests</span>
+ <div class="hero-visual" aria-label="NightGuildBot illustrated activity panel">
+  <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span class="orbit-star star-a">✳</span><span class="orbit-star star-b">✦</span>
+  <div class="hero-float float-top"><span class="float-dot"></span> THE SERVER IS AWAKE</div>
   <div class="hero-panel">
-   <div class="hero-panel-top"><span>THE NIGHT SHIFT</span><span class="panel-index">NG / 001</span></div><div class="panel-rule"></div>
-   <img class="hero-emblem" src="/assets/nightguildbot-logo.webp" alt="NightGuildBot logo"/>
-   <h3>NightGuild<span class="gradient">Bot</span></h3><p>There's always something going on.</p>
-   <div class="hero-tags"><span><b>01</b> Guilds</span><span><b>02</b> Progression</span><span><b>03</b> Fishing</span><span><b>04</b> Music & games</span></div>
-   <div class="panel-foot"><span>MADE FOR COMMUNITIES</span><span>EST. IN THE CHAT <span class="tiny-star">✦</span></span></div>
+   <div class="panel-heading"><span>NIGHTGUILD / FIELD NOTES</span><span>№ 001</span></div>
+   <div class="panel-art"><div class="art-halo"></div><img class="hero-emblem" src="/assets/nightguildbot-logo.webp" alt="NightGuildBot emblem"/><span class="art-orbit-label">NG—V2</span></div>
+   <div class="panel-title"><span>TONIGHT'S PLANS</span><span class="panel-date">NO. ONE IS NEVER THE PLAN</span></div>
+   <div class="activity-list">
+    <div><span class="activity-icon">✳</span><span><b>Find your guild</b><small>Make a little corner of your own</small></span><span class="activity-arrow">↗</span></div>
+    <div><span class="activity-icon">≈</span><span><b>Cast one more line</b><small>The Fishdex won't fill itself</small></span><span class="activity-arrow">↗</span></div>
+    <div><span class="activity-icon">♫</span><span><b>Set the mood</b><small>Every good night needs a soundtrack</small></span><span class="activity-arrow">↗</span></div>
+   </div>
+   <div class="panel-bottom"><span><i></i> MADE FOR THE IN-BETWEEN</span><span>STAY A WHILE</span></div>
   </div>
-  <span class="hero-float two">One more round? <span aria-hidden="true">↗</span></span>
+  <div class="hero-float float-bottom">ONE MORE ROUND? <span>↗</span></div>
  </div>
 </section>
-<div class="ticker" aria-label="NightGuildBot features"><div class="ticker-track"><span>GUILD UP</span><i>✳</i><span>CAST A LINE</span><i>✳</i><span>FIND YOUR NEXT FAVOURITE</span><i>✳</i><span>PLAY ANOTHER ROUND</span><i>✳</i><span>GUILD UP</span><i>✳</i><span>CAST A LINE</span><i>✳</i><span>FIND YOUR NEXT FAVOURITE</span><i>✳</i><span>PLAY ANOTHER ROUND</span><i>✳</i></div></div>
-<section class="section"><div class="container">
- <div class="section-head"><div><span class="eyebrow">PICK YOUR NEXT DISTRACTION</span><h2>There's a bit<br/>of everything.</h2></div><p>Some things help your server run. Some give people a reason to stick around for five more minutes. NightGuildBot makes room for both.</p></div>
- <div class="feature-grid">{features.map(([icon,title,desc,href],i)=><a class="feature-card" href={href}><div class="feature-card-top"><div class="feature-icon">{icon}</div><span class="feature-number">0{i+1}</span></div><h3>{title}</h3><p>{desc}</p><span class="card-arrow" aria-hidden="true">↗</span></a>)}</div>
+<div class="ticker" aria-label="NightGuildBot features"><div class="ticker-track"><span>MAKE A GUILD</span><i>✳</i><span>FIND SOMETHING RARE</span><i>✳</i><span>LOSE TRACK OF TIME</span><i>✳</i><span>ONE MORE ROUND</span><i>✳</i><span>MAKE A GUILD</span><i>✳</i><span>FIND SOMETHING RARE</span><i>✳</i><span>LOSE TRACK OF TIME</span><i>✳</i><span>ONE MORE ROUND</span><i>✳</i></div></div>
+<section class="section feature-section"><div class="container">
+ <div class="section-head"><div><span class="eyebrow">A FEW THINGS TO GET INTO</span><h2>Pick up a side quest.<br/><em>Or six.</em></h2></div><p>Useful when you need them. Fun when you don't. NightGuild is a collection of systems that give a server a little more life.</p></div>
+ <div class="feature-grid">{features.map(([icon,title,desc,href,num])=><a class="feature-card" href={href}><div class="feature-card-top"><span class="feature-icon">{icon}</span><span class="feature-number">{num} / 06</span></div><h3>{title}</h3><p>{desc}</p><span class="card-arrow" aria-hidden="true">↗</span></a>)}</div>
 </div></section>
-<section class="section closing-section"><div class="container callout-banner"><div><span class="eyebrow">NO BIG SPEECH. JUST GET IN THERE.</span><h2>Have a look around.</h2><p>The docs will get you started. The rest is best explored in your server.</p></div><a class="button primary" href="docs/index.html">Open the docs <span aria-hidden="true">↗</span></a><span class="callout-stamp" aria-hidden="true">NG<br/>✳</span></div></section>
+<section class="interlude-section"><div class="container interlude">
+ <div class="interlude-mark" aria-hidden="true"><span>✳</span><span>✦</span><span>✳</span></div>
+ <div class="interlude-copy"><span class="eyebrow">THE BIT BETWEEN MESSAGES</span><h2>Made for the moments<br/>that aren't announcements.</h2><p>Not every good server moment needs an event, a ping or a plan. Sometimes it's a ridiculous catch, a guild mate showing off an upgrade, or a song that keeps the call going.</p></div>
+ <div class="interlude-aside"><span class="aside-number">02:17</span><span class="aside-rule"></span><span class="aside-caption">STILL HERE.<br/>STILL PLAYING.</span></div>
+</div></section>
+<section class="section closing-section"><div class="container callout-banner"><div><span class="eyebrow">NO CEREMONY REQUIRED</span><h2>Come see what’s here.</h2><p>The field guide has the basics. The rest is better discovered in your server.</p></div><a class="button primary" href="docs/index.html">Open the field guide <span aria-hidden="true">↗</span></a><span class="callout-stamp" aria-hidden="true">NIGHT<br/>GUILD</span></div></section>
 </SiteLayout>
