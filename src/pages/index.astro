@@ -1,31 +1,39 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
-const features=[['✦','Guilds','Build a crew, bring members together and grow shared progression.','docs/guilds.html'],['◈','Economy & progression','A shared economy, personal rewards and long-term goals.','docs/economy.html'],['⌁','Fishing','Discover catches, build your collection and explore the Fishdex.','docs/fishing.html'],['♫','Music','Listen together with playback and queue controls.','docs/music.html'],['❖','Text games','Hunt, collect, battle and build your own progression.','docs/owo.html'],['⌘','Command reference','Find your way around the bot and its available commands.','docs/commands.html']];
+const features=[
+ ['✦','Guilds','Give your people a corner of the server that feels like theirs.','docs/guilds.html'],
+ ['◈','Economy & progression','A shared economy, personal rewards and reasons to keep going.','docs/economy.html'],
+ ['⌁','Fishing','Cast a line, find something rare and fill out your Fishdex.','docs/fishing.html'],
+ ['♫','Music','Put something on and let the voice channel do its thing.','docs/music.html'],
+ ['❖','Text games','A little competition, collecting and chaos between conversations.','docs/owo.html'],
+ ['⌘','Commands','The full list, without having to guess what to type.','docs/commands.html']
+];
 ---
-<SiteLayout title="NightGuildBot — Your community, your guild" description="Guilds, shared progression, fishing, music and chat games.">
+<SiteLayout title="NightGuildBot — Give the chat something to do" description="Guilds, fishing, progression, music and little reasons to hang around.">
 <section class="container hero">
-  <div class="hero-copy">
-    <span class="eyebrow">A COMMUNITY BOT WITH A WORLD OF ITS OWN</span>
-    <h1>Make your server<br/><span class="gradient">a place to belong.</span></h1>
-    <p class="lead">Build a guild, chase progression, fill your Fishdex and make every conversation a little more fun. NightGuildBot brings community features and game-like systems together.</p>
-    <div class="actions"><a class="button primary" href="docs/getting-started.html">Get started <span aria-hidden="true">→</span></a><a class="button" href="docs/index.html">Explore documentation</a></div>
-    <p class="hero-note">Independently developed <span aria-hidden="true">·</span> Guilds <span aria-hidden="true">·</span> Fishing <span aria-hidden="true">·</span> RPG <span aria-hidden="true">·</span> Music</p>
+ <div class="hero-copy">
+  <span class="eyebrow">A DISCORD BOT BUILT FOR THE IN-BETWEEN</span>
+  <h1>Give the chat<br/><span class="gradient">something to do.</span></h1>
+  <p class="lead">Start a guild. Go fishing. Get ridiculously invested in a collection. NightGuildBot brings the little side quests, shared goals and useful tools that make a server feel lived in.</p>
+  <div class="actions"><a class="button primary" href="docs/getting-started.html">Take a look <span aria-hidden="true">↗</span></a><a class="button" href="docs/index.html">Read the docs</a></div>
+  <div class="hero-meta"><span><i class="status-dot"></i> Independently built</span><span>Guilds</span><span>Fishing</span><span>Games</span></div>
+ </div>
+ <div class="hero-visual" aria-label="NightGuildBot feature overview">
+  <span class="hero-float one"><span class="float-mark">✳</span> Your server, with side quests</span>
+  <div class="hero-panel">
+   <div class="hero-panel-top"><span>THE NIGHT SHIFT</span><span class="panel-index">NG / 001</span></div><div class="panel-rule"></div>
+   <img class="hero-emblem" src="/assets/nightguildbot-logo.webp" alt="NightGuildBot logo"/>
+   <h3>NightGuild<span class="gradient">Bot</span></h3><p>There's always something going on.</p>
+   <div class="hero-tags"><span><b>01</b> Guilds</span><span><b>02</b> Progression</span><span><b>03</b> Fishing</span><span><b>04</b> Music & games</span></div>
+   <div class="panel-foot"><span>MADE FOR COMMUNITIES</span><span>EST. IN THE CHAT <span class="tiny-star">✦</span></span></div>
   </div>
-  <div class="hero-visual" aria-label="NightGuildBot feature overview">
-    <span class="hero-float one">✦ Built for your community</span>
-    <div class="hero-panel">
-      <div class="hero-panel-top"><span>YOUR COMMUNITY HUB</span><span><i class="status-dot"></i>Night mode</span></div>
-      <img class="hero-emblem" src="/assets/nightguildbot-logo.webp" alt="NightGuildBot logo"/>
-      <h3>NightGuild<span class="gradient">Bot</span></h3>
-      <p>One place for your community to grow.</p>
-      <div class="hero-tags"><span>✦ Guilds</span><span>◈ Progression</span><span>⌁ Fishing</span><span>♫ Music</span></div>
-    </div>
-    <span class="hero-float two">A little more to discover ↗</span>
-  </div>
+  <span class="hero-float two">One more round? <span aria-hidden="true">↗</span></span>
+ </div>
 </section>
+<div class="ticker" aria-label="NightGuildBot features"><div class="ticker-track"><span>GUILD UP</span><i>✳</i><span>CAST A LINE</span><i>✳</i><span>FIND YOUR NEXT FAVOURITE</span><i>✳</i><span>PLAY ANOTHER ROUND</span><i>✳</i><span>GUILD UP</span><i>✳</i><span>CAST A LINE</span><i>✳</i><span>FIND YOUR NEXT FAVOURITE</span><i>✳</i><span>PLAY ANOTHER ROUND</span><i>✳</i></div></div>
 <section class="section"><div class="container">
-  <div class="section-head"><div><span class="eyebrow">THE NIGHTGUILD EXPERIENCE</span><h2>More than a bot.<br/><span class="gradient">A shared adventure.</span></h2></div><p>Bring the tools your community needs together with systems that give members something to discover, collect and build.</p></div>
-  <div class="feature-grid">{features.map(([icon,title,desc,href])=><a class="feature-card" href={href}><div class="feature-icon">{icon}</div><h3>{title}</h3><p>{desc}</p></a>)}</div>
+ <div class="section-head"><div><span class="eyebrow">PICK YOUR NEXT DISTRACTION</span><h2>There's a bit<br/>of everything.</h2></div><p>Some things help your server run. Some give people a reason to stick around for five more minutes. NightGuildBot makes room for both.</p></div>
+ <div class="feature-grid">{features.map(([icon,title,desc,href],i)=><a class="feature-card" href={href}><div class="feature-card-top"><div class="feature-icon">{icon}</div><span class="feature-number">0{i+1}</span></div><h3>{title}</h3><p>{desc}</p><span class="card-arrow" aria-hidden="true">↗</span></a>)}</div>
 </div></section>
-<section class="section"><div class="container callout-banner"><div><span class="eyebrow">READY WHEN YOU ARE</span><h2>Find your place in the guild.</h2><p>Start with the overview, then explore the features that interest you.</p></div><a class="button primary" href="docs/index.html">Explore NightGuildBot →</a></div></section>
+<section class="section closing-section"><div class="container callout-banner"><div><span class="eyebrow">NO BIG SPEECH. JUST GET IN THERE.</span><h2>Have a look around.</h2><p>The docs will get you started. The rest is best explored in your server.</p></div><a class="button primary" href="docs/index.html">Open the docs <span aria-hidden="true">↗</span></a><span class="callout-stamp" aria-hidden="true">NG<br/>✳</span></div></section>
 </SiteLayout>
