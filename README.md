@@ -1,24 +1,16 @@
 # NightGuildBot website
 
-A small, static website for NightGuildBot. It uses plain HTML, CSS and JavaScript; there is no build step or package install.
+Redesigned static website built with Astro. Astro generates HTML, CSS and JavaScript at build time; no Node.js server is needed in production.
 
-## Edit locally
+## Development
 
-Open `index.html` in a browser, or use a local static server while editing. Shared styling lives in `assets/style.css`, the logo is in `assets/`, and the small mobile-menu/year script is `assets/app.js`. Documentation pages are in `docs/`.
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
 
-## Publish with GitHub Pages
+The static site is generated in `dist/`. GitHub Actions builds and deploys that directory to GitHub Pages. Set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**.
 
-This repository includes a GitHub Actions workflow at `.github/workflows/deploy.yml`.
-
-1. Push the files to the `main` branch.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment → Source**, select **GitHub Actions**.
-4. Open the **Actions** tab and wait for **Deploy NightGuild website** to finish.
-5. Visit https://nightguild.github.io/.
-
-The website uses relative links so it works at the root `nightguild.github.io` domain.
-
-## Before sharing
-
-- Replace the placeholder Discord link in `index.html` with your real invite link.
-- Verify command names, permissions, and behaviour against the running bot before treating the docs as authoritative.
+The original `/docs/*.html`, `/terms.html` and `/privacy.html` routes are retained. The existing logo is reused. Before launch, replace the placeholder Discord invite URL and verify command details, privacy and terms against the live service.
