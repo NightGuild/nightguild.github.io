@@ -1,54 +1,66 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
-
-const features = [
-  { title: 'Guilds', description: 'Build a crew, create an identity and work towards shared goals.', href: 'docs/guilds.html', number: '01' },
-  { title: 'Progression', description: 'A connected economy, rewards and upgrades that grow with your community.', href: 'docs/economy.html', number: '02' },
-  { title: 'Fishing', description: 'Discover catches, collect rare finds and complete your Fishdex.', href: 'docs/fishing.html', number: '03' },
-  { title: 'Community games', description: 'Small activities and shared moments that bring people together.', href: 'docs/index.html', number: '04' }
+const features=[
+  {number:'01',title:'Guilds',description:'Bring people together around a shared name, identity and goals.',href:'/docs/guilds.html',label:'BUILD TOGETHER'},
+  {number:'02',title:'Progression',description:'Earn, unlock and improve with a connected personal and guild economy.',href:'/docs/economy.html',label:'KEEP GROWING'},
+  {number:'03',title:'Fishing',description:'Discover new catches, chase rarities and fill out your Fishdex.',href:'/docs/fishing.html',label:'FIND SOMETHING RARE'},
+  {number:'04',title:'Games & more',description:'Give the chat something to do, from collecting to friendly competition.',href:'/docs/owo.html',label:'PLAY YOUR WAY'}
 ];
 ---
-<SiteLayout title="NightGuild — A little more for your community" description="NightGuild brings guilds, progression, fishing and community games to your Discord server.">
-  <section class="simple-hero container">
-    <p class="simple-eyebrow"><span></span> MADE FOR YOUR COMMUNITY</p>
-    <h1>Make your server<br />a place to <span>belong.</span></h1>
-    <p class="simple-intro">NightGuild brings people together with guilds, shared progression, fishing and games. A little more to do, without making things complicated.</p>
-    <div class="simple-actions">
-      <a class="simple-button simple-button-primary" href="docs/getting-started.html">Get started <span>↗</span></a>
-      <a class="simple-button simple-button-secondary" href="docs/index.html">Explore NightGuild</a>
-    </div>
-    <div class="simple-preview" aria-label="NightGuild feature preview">
-      <div class="simple-preview-heading"><span class="simple-preview-mark">N</span><div><strong>NightGuild</strong><small>YOUR COMMUNITY, YOUR ADVENTURE</small></div><span class="simple-preview-status">READY TO EXPLORE</span></div>
-      <div class="simple-preview-content">
-        <div><small>YOUR GUILD</small><strong>The Night Crew</strong><span>Growing together, one level at a time.</span></div>
-        <div class="simple-preview-stat"><strong>08</strong><small>LEVEL</small></div>
-        <div class="simple-preview-stat"><strong>2,450</strong><small>SHARED XP</small></div>
-        <div class="simple-preview-stat"><strong>06</strong><small>MEMBERS</small></div>
+<SiteLayout title="NightGuild — Discord, with more to do" description="Guilds, progression, fishing and games for your Discord community.">
+  <section class="hero container">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> A COMMUNITY BOT THAT FEELS LIKE MORE</p>
+      <h1>Your server.<br /><span>A little more alive.</span></h1>
+      <p class="hero-description">NightGuild gives your Discord community its own things to build, discover and enjoy together. No clutter. Just more reasons to hang out.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/docs/getting-started.html">Get started <span>↗</span></a>
+        <a class="text-link" href="/docs/index.html">Explore the docs <span>→</span></a>
       </div>
+      <div class="hero-note"><span class="note-line"></span> GUILDS · PROGRESSION · FISHING · COMMUNITY</div>
+    </div>
+    <div class="hero-card-wrap" aria-label="NightGuild guild preview">
+      <div class="hero-card">
+        <div class="hero-card-top"><span class="tiny-brand"><span>N</span> NIGHTGUILD</span><span class="online"><i></i> COMMUNITY PREVIEW</span></div>
+        <div class="guild-symbol">✳</div>
+        <p class="card-overline">YOUR GUILD</p>
+        <h2>The Night Crew</h2>
+        <p class="guild-caption">A place to build something together.</p>
+        <div class="guild-divider"></div>
+        <div class="guild-metrics">
+          <div><strong>08</strong><span>LEVEL</span></div>
+          <div><strong>2,450</strong><span>SHARED XP</span></div>
+          <div><strong>06</strong><span>MEMBERS</span></div>
+        </div>
+        <div class="guild-progress-label"><span>NEXT MILESTONE</span><span>72%</span></div>
+        <div class="guild-progress"><span></span></div>
+      </div>
+      <div class="floating-caption"><span>✦</span> MADE TO PLAY TOGETHER</div>
     </div>
   </section>
 
-  <section class="simple-features" id="features">
+  <section class="feature-section" id="features">
     <div class="container">
-      <div class="simple-section-heading">
-        <div><p class="simple-eyebrow">WHAT YOU CAN DO</p><h2>Everything in one place.</h2></div>
-        <p>Easy to get into, with plenty to discover as your community grows.</p>
+      <div class="section-heading">
+        <div><p class="eyebrow">A FEW WAYS TO MAKE IT YOURS</p><h2>More than a list<br />of commands.</h2></div>
+        <p>Each part of NightGuild adds something to your community. Use what you like, make it your own, and let it grow from there.</p>
       </div>
-      <div class="simple-feature-grid">
-        {features.map((feature) => <a class="simple-feature" href={feature.href}>
-          <span class="simple-feature-number">{feature.number}</span>
-          <h3>{feature.title}</h3>
+      <div class="feature-list">
+        {features.map((feature)=><a class="feature-row" href={feature.href}>
+          <span class="feature-number">{feature.number}</span>
+          <div class="feature-main"><span class="feature-label">{feature.label}</span><h3>{feature.title}</h3></div>
           <p>{feature.description}</p>
-          <span class="simple-feature-arrow">Learn more ↗</span>
+          <span class="feature-arrow">↗</span>
         </a>)}
       </div>
     </div>
   </section>
 
-  <section class="simple-bottom">
-    <div class="container simple-bottom-inner">
-      <div><p class="simple-eyebrow">GETTING STARTED IS EASY</p><h2>Bring your community<br />a little closer.</h2><p>Take a look at the documentation and see what NightGuild can do for your server.</p></div>
-      <a class="simple-button simple-button-primary" href="docs/getting-started.html">Read the guide <span>↗</span></a>
+  <section class="closing-section">
+    <div class="container closing-inner">
+      <div><p class="eyebrow">READY WHEN YOU ARE</p><h2>Make room for<br /><span>something new.</span></h2><p>Start with the guide, explore the features and see what fits your community.</p></div>
+      <div class="closing-actions"><a class="button button-primary" href="/docs/getting-started.html">Read the getting started guide <span>↗</span></a><a class="text-link" href="/docs/index.html">Browse documentation <span>→</span></a></div>
+      <span class="closing-mark" aria-hidden="true">N</span>
     </div>
   </section>
 </SiteLayout>
