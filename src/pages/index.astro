@@ -2,66 +2,53 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 
 const features = [
-  { number: '01', icon: '✳', title: 'Guilds that feel like yours', text: 'Create a crew, build its identity and give everyone something to work towards.', href: 'docs/guilds.html', tag: 'COMMUNITY' },
-  { number: '02', icon: '⌁', title: 'A shared progression loop', text: 'One connected economy, rewards and upgrades that make every session count.', href: 'docs/economy.html', tag: 'PROGRESSION' },
-  { number: '03', icon: '≈', title: 'A whole world to collect', text: 'Cast a line, discover new catches and fill out your Fishdex over time.', href: 'docs/fishing.html', tag: 'FISHING' },
-  { number: '04', icon: '♫', title: 'Keep the night going', text: 'Music, text games and little moments that make a voice call feel alive.', href: 'docs/music.html', tag: 'GOOD TIMES' }
+  { title: 'Guilds', description: 'Build a crew, create an identity and work towards shared goals.', href: 'docs/guilds.html', number: '01' },
+  { title: 'Progression', description: 'A connected economy, rewards and upgrades that grow with your community.', href: 'docs/economy.html', number: '02' },
+  { title: 'Fishing', description: 'Discover catches, collect rare finds and complete your Fishdex.', href: 'docs/fishing.html', number: '03' },
+  { title: 'Community games', description: 'Small activities and shared moments that bring people together.', href: 'docs/index.html', number: '04' }
 ];
 ---
-<SiteLayout title="NightGuild — Make your server a place to stay" description="Guilds, progression, fishing and community games. NightGuild gives your Discord server more reasons to hang out.">
-  <section class="ng-hero container">
-    <div class="ng-hero-copy">
-      <div class="ng-status"><span></span> BUILT FOR THE LONGER NIGHTS</div>
-      <p class="ng-overline">YOUR COMMUNITY, WITH A LITTLE MORE TO DO</p>
-      <h1>Give your server<br/>a <em>world of its own.</em></h1>
-      <p class="ng-hero-text">Guilds to build. Rare things to find. Progress to make together. NightGuild brings a collection of connected experiences to your Discord community — without taking over the conversation.</p>
-      <div class="ng-hero-actions">
-        <a class="ng-button ng-button-primary" href="docs/getting-started.html">Get started <span>↗</span></a>
-        <a class="ng-button ng-button-quiet" href="docs/index.html">Explore features <span>→</span></a>
-      </div>
-      <div class="ng-trust-line"><span>INDEPENDENTLY DEVELOPED</span><i></i><span>MADE FOR COMMUNITIES</span></div>
+<SiteLayout title="NightGuild — A little more for your community" description="NightGuild brings guilds, progression, fishing and community games to your Discord server.">
+  <section class="simple-hero container">
+    <p class="simple-eyebrow"><span></span> MADE FOR YOUR COMMUNITY</p>
+    <h1>Make your server<br />a place to <span>belong.</span></h1>
+    <p class="simple-intro">NightGuild brings people together with guilds, shared progression, fishing and games. A little more to do, without making things complicated.</p>
+    <div class="simple-actions">
+      <a class="simple-button simple-button-primary" href="docs/getting-started.html">Get started <span>↗</span></a>
+      <a class="simple-button simple-button-secondary" href="docs/index.html">Explore NightGuild</a>
     </div>
-    <div class="ng-hero-stage" aria-label="Preview of NightGuild Discord features">
-      <div class="ng-stage-glow"></div>
-      <div class="ng-stage-orbit ng-stage-orbit-one"></div><div class="ng-stage-orbit ng-stage-orbit-two"></div>
-      <div class="ng-floating-note ng-note-top"><span class="ng-note-dot"></span> YOUR NEXT ADVENTURE STARTS HERE</div>
-      <div class="ng-discord-window">
-        <div class="ng-window-top"><div class="ng-window-dots"><i></i><i></i><i></i></div><span>NIGHTGUILD / COMMUNITY FEED</span><b>● LIVE PREVIEW</b></div>
-        <div class="ng-window-body">
-          <aside class="ng-window-rail"><span class="ng-rail-logo">N</span><i></i><i></i><i></i><i></i></aside>
-          <div class="ng-chat">
-            <div class="ng-chat-channel"># <b>guild-hall</b><span>Today’s activity</span></div>
-            <div class="ng-message"><div class="ng-avatar ng-avatar-red">N</div><div><b>NightGuild <small>APP</small></b><p>Your guild is ready for its next chapter.</p><div class="ng-guild-card"><div class="ng-guild-top"><span>✳ &nbsp; THE NIGHT CREW</span><small>GUILD PROFILE</small></div><strong>Built together.</strong><p>Shared goals, shared progress. Your corner of the server.</p><div class="ng-guild-stats"><span><b>LEVEL 08</b><small>GUILD LEVEL</small></span><span><b>2,450</b><small>SHARED XP</small></span><span><b>06</b><small>MEMBERS</small></span></div></div></div></div>
-            <div class="ng-message ng-message-secondary"><div class="ng-avatar ng-avatar-muted">m</div><div><b>moonlit <small>MEMBER</small></b><p>one more upgrade and we're there ✨</p></div></div>
-            <div class="ng-chat-input"><span>Message #guild-hall</span><b>＋</b></div>
-          </div>
-        </div>
+    <div class="simple-preview" aria-label="NightGuild feature preview">
+      <div class="simple-preview-heading"><span class="simple-preview-mark">N</span><div><strong>NightGuild</strong><small>YOUR COMMUNITY, YOUR ADVENTURE</small></div><span class="simple-preview-status">READY TO EXPLORE</span></div>
+      <div class="simple-preview-content">
+        <div><small>YOUR GUILD</small><strong>The Night Crew</strong><span>Growing together, one level at a time.</span></div>
+        <div class="simple-preview-stat"><strong>08</strong><small>LEVEL</small></div>
+        <div class="simple-preview-stat"><strong>2,450</strong><small>SHARED XP</small></div>
+        <div class="simple-preview-stat"><strong>06</strong><small>MEMBERS</small></div>
       </div>
-      <div class="ng-floating-note ng-note-bottom"><span>✦</span> A LITTLE MORE LIFE IN EVERY CHANNEL</div>
-      <div class="ng-stage-index">NG / 02.0</div>
     </div>
   </section>
 
-  <section class="ng-proof-strip"><div class="container ng-proof-inner"><span>MORE THAN COMMANDS</span><i>✳</i><span>BUILT AROUND PEOPLE</span><i>✳</i><span>ALWAYS GROWING</span><i>✳</i><span>MADE TO BE PLAYED TOGETHER</span></div></section>
-
-  <section class="ng-section ng-features" id="features"><div class="container">
-    <div class="ng-section-heading"><div><p class="ng-overline">A FEW REASONS TO STICK AROUND</p><h2>Small worlds.<br/><em>Big nights.</em></h2></div><p>NightGuild is built around the things communities naturally do together — then gives those things a little more room to grow.</p></div>
-    <div class="ng-feature-grid">{features.map((feature) => <a class="ng-feature-card" href={feature.href}><div class="ng-feature-meta"><span>{feature.icon}</span><small>{feature.number} / 04</small></div><div class="ng-feature-tag">{feature.tag}</div><h3>{feature.title}</h3><p>{feature.text}</p><div class="ng-feature-link">Explore feature <span>↗</span></div></a>)}</div>
-  </div></section>
-
-  <section class="ng-showcase"><div class="container ng-showcase-grid">
-    <div class="ng-showcase-copy"><p class="ng-overline">ONE BOT. A LOT TO GET INTO.</p><h2>Progress that<br/><em>brings people in.</em></h2><p>Start with a guild, find a new hobby in the server, or chase that one rare catch. NightGuild's systems are designed to connect — so there's always another reason to come back.</p><a class="ng-inline-link" href="docs/index.html">Take a look around <span>↗</span></a></div>
-    <div class="ng-showcase-stack">
-      <div class="ng-mini-card ng-fish-card"><div class="ng-mini-card-head"><span>FISHDEX / DISCOVERY</span><span>NO. 024</span></div><div class="ng-fish-art"><span>≈</span><i></i></div><div class="ng-fish-info"><div><small>NEW DISCOVERY</small><strong>Moonlit Koi</strong></div><span class="ng-rarity">✦ RARE</span></div><div class="ng-fish-foot"><span>COLLECTION PROGRESS</span><b>24 / 80</b></div><div class="ng-progress"><i></i></div></div>
-      <div class="ng-mini-card ng-level-card"><div class="ng-level-icon">↗</div><div><small>GUILD PROGRESSION</small><strong>Another milestone reached.</strong><span>Keep building together.</span></div><b>LEVEL UP</b></div>
+  <section class="simple-features" id="features">
+    <div class="container">
+      <div class="simple-section-heading">
+        <div><p class="simple-eyebrow">WHAT YOU CAN DO</p><h2>Everything in one place.</h2></div>
+        <p>Easy to get into, with plenty to discover as your community grows.</p>
+      </div>
+      <div class="simple-feature-grid">
+        {features.map((feature) => <a class="simple-feature" href={feature.href}>
+          <span class="simple-feature-number">{feature.number}</span>
+          <h3>{feature.title}</h3>
+          <p>{feature.description}</p>
+          <span class="simple-feature-arrow">Learn more ↗</span>
+        </a>)}
+      </div>
     </div>
-  </div></section>
+  </section>
 
-  <section class="ng-steps-section"><div class="container"><div class="ng-section-heading ng-steps-heading"><div><p class="ng-overline">NO COMPLICATED SETUP</p><h2>Three steps.<br/><em>Then you're in.</em></h2></div><p>Get NightGuild into your community and let everyone find their own way to play.</p></div><div class="ng-steps">
-    <div class="ng-step"><span>01</span><h3>Invite NightGuild</h3><p>Add the bot to your Discord server and give it the permissions it needs.</p></div>
-    <div class="ng-step"><span>02</span><h3>Make it yours</h3><p>Set up the features your community wants to use. Start small, grow from there.</p></div>
-    <div class="ng-step"><span>03</span><h3>Find your people</h3><p>Create guilds, discover systems and give your members something to share.</p></div>
-  </div></div></section>
-
-  <section class="ng-final-cta"><div class="container ng-final-inner"><div><p class="ng-overline">YOUR SERVER IS THE STARTING POINT</p><h2>There's room for<br/><em>one more adventure.</em></h2><p>Take a look through the field guide and see what NightGuild can bring to your community.</p></div><div class="ng-final-actions"><a class="ng-button ng-button-primary" href="docs/getting-started.html">Get started <span>↗</span></a><a class="ng-inline-link" href="docs/index.html">Read the documentation <span>→</span></a></div><div class="ng-final-watermark">NG</div></div></section>
+  <section class="simple-bottom">
+    <div class="container simple-bottom-inner">
+      <div><p class="simple-eyebrow">GETTING STARTED IS EASY</p><h2>Bring your community<br />a little closer.</h2><p>Take a look at the documentation and see what NightGuild can do for your server.</p></div>
+      <a class="simple-button simple-button-primary" href="docs/getting-started.html">Read the guide <span>↗</span></a>
+    </div>
+  </section>
 </SiteLayout>
