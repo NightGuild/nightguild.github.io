@@ -1,33 +1,55 @@
 ---
-const {title='NightGuildBot',description='A Discord bot built around guilds, progression, fishing and games.',active='home'}=Astro.props;
-const root='/';
-const nav=[['Home',root+'index.html','home'],['Documentation',root+'docs/index.html','docs'],['Commands',root+'docs/commands.html','commands']];
+const {title='NightGuild — Discord, with more to do',description='Guilds, progression, fishing and games for your Discord community.',active='home'}=Astro.props;
+const nav=[['Home','/index.html','home'],['Features','/index.html#features','features'],['Documentation','/docs/index.html','docs']];
 ---
 <!doctype html>
 <html lang="en">
 <head>
- <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
- <meta name="theme-color" content="#080c10"/><meta name="description" content={description}/>
- <meta property="og:type" content="website"/><meta property="og:site_name" content="NightGuildBot"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:image" content="https://nightguild.github.io/assets/nightguildbot-logo.webp"/>
- <meta name="color-scheme" content="dark"/><title>{title}</title>
- <link rel="icon" type="image/webp" href={root+'assets/nightguildbot-logo.webp'}/>
- <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
- <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet"/>
- <link rel="stylesheet" href={root+'assets/style.css'}/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101012" />
+  <meta name="description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NightGuild" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://nightguild.github.io/assets/nightguildbot-logo.webp" />
+  <title>{title}</title>
+  <link rel="icon" type="image/webp" href="/assets/nightguildbot-logo.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
- <a class="skip-link" href="#main-content">Skip to content</a>
- <header class="site-header"><div class="header-inner">
-  <a class="brand" href={root+'index.html'}><img src={root+'assets/nightguildbot-logo.webp'} alt=""/><span>nightguild<span class="brand-bot">bot</span></span></a>
-  <button class="menu-toggle" data-menu-toggle aria-label="Toggle navigation" aria-expanded="false">☰</button>
-  <nav class="nav" data-site-nav>{nav.map(([label,href,key])=><a class:list={[active===key?'active':'']} href={href}>{label}</a>)}<a class="nav-cta" href="https://discord.com/" target="_blank" rel="noopener noreferrer">Find us on Discord ↗</a></nav>
- </div></header>
- <main id="main-content"><slot/></main>
- <footer class="site-footer"><div class="container footer-inner">
-  <a class="brand" href={root+'index.html'}><img src={root+'assets/nightguildbot-logo.webp'} alt=""/><span>nightguild<span class="brand-bot">bot</span></span></a>
-  <span class="footer-note">A small project for the big group chats.</span>
-  <div class="footer-links"><a href={root+'terms.html'}>Terms</a><a href={root+'privacy.html'}>Privacy</a><a href="https://github.com/NightGuild/nightguild.github.io">GitHub ↗</a></div>
-  <span class="copyright">© <span data-year></span> NIGHTGUILDBOT</span>
- </div></footer>
- <script src={root+'assets/app.js'} defer></script>
-</body></html>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/index.html" aria-label="NightGuild home">
+        <img src="/assets/nightguildbot-logo.webp" alt="" />
+        <span>nightguild</span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation">
+        {nav.map(([label,href,key])=><a class:list={[active===key?'active':'']} href={href}>{label}</a>)}
+        <a class="nav-cta" href="/docs/getting-started.html">Get started <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content"><slot /></main>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="/index.html"><img src="/assets/nightguildbot-logo.webp" alt="" /><span>nightguild</span></a>
+        <p>A little more to do. A lot more to share.</p>
+      </div>
+      <div class="footer-column"><span>EXPLORE</span><a href="/index.html#features">Features</a><a href="/docs/index.html">Documentation</a><a href="/docs/commands.html">Commands</a></div>
+      <div class="footer-column"><span>PROJECT</span><a href="/terms.html">Terms of use</a><a href="/privacy.html">Privacy policy</a><a href="https://github.com/NightGuild/nightguild.github.io" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span data-year></span> NightGuild. An independent community project.</span><span>Made for the late-night crew.</span></div>
+  </footer>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
