@@ -144,3 +144,16 @@ footer .footer-links a:hover{color:var(--accent)}
 .doc .docgrid a{padding:15px 14px;border:1px solid var(--line);border-radius:10px;margin:5px 0;background:rgba(19,25,34,.45);transition:transform .2s ease,border-color .2s ease,background .2s ease}
 .doc .docgrid a:hover{transform:translateY(-2px);border-color:rgba(var(--accent-rgb),.45);background:var(--accent-soft)}
 @media(max-width:600px){.doc .tip-list{grid-template-columns:1fr}.private-notice{align-items:flex-start}}
+
+/* Keep the site calm and readable: motion should be a detail, not the design */
+body:before{animation:none;opacity:.65}
+body:after{opacity:.045}
+.reveal-ready .section,.reveal-ready .next-steps,.reveal-ready .doc h2,.reveal-ready .docgrid a,.reveal-ready .feature{animation:none}
+.feature:hover{transform:none;background:rgba(var(--accent-rgb),.035)}
+.doc .docgrid a:hover{transform:none}
+.btn.primary{box-shadow:none}
+.btn.primary:hover{filter:brightness(1.06);box-shadow:none}
+.theme-trigger:hover,.theme-trigger[aria-expanded="true"]{box-shadow:none}
+.theme-menu{box-shadow:0 12px 32px rgba(0,0,0,.32)}
+h1{letter-spacing:-1.7px;font-weight:700}
+.doc h2{border-image:none;border-bottom:1px solid var(--line)}
